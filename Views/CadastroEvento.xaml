@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MauiAppCE.Views.CadastroEvento">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <!-- Nome do evento -->
+            <Label Text="Nome do Evento" FontSize="18" FontFamily="Dancing"/>
+            <Entry x:Name="entryNomeEvento" Placeholder="Digite o nome do evento" />
+
+            <!-- Data de início -->
+            <Label Text="Data de Início" FontSize="18" FontFamily="Dancing"/>
+            <DatePicker x:Name="datePickerInicio" />
+
+            <!-- Data de término -->
+            <Label Text="Data de Término" FontSize="18" FontFamily="Dancing"/>
+            <DatePicker x:Name="datePickerTermino" />
+
+            <!-- Número de participantes -->
+            <Label Text="Número de Participantes" FontSize="18" FontFamily="Dancing"/>
+            <Stepper x:Name="stepperParticipantes" Minimum="1" Maximum="500" Increment="1" ValueChanged="OnStepperValueChanged" />
+            <Label x:Name="labelParticipantes" Text="1" FontSize="16" />
+
+            <!-- Local do evento -->
+            <Label Text="Local do Evento" FontSize="18" FontFamily="Dancing"/>
+            <Entry x:Name="entryLocal" Placeholder="Digite o local do evento" />
+
+            <!-- Custo por participante -->
+            <Label Text="Custo por Participante" FontSize="18" FontFamily="Dancing"/>
+            <Entry x:Name="entryCustoParticipante" Keyboard="Numeric" Placeholder="Digite o custo por participante" />
+
+            <!-- Botão para cadastro -->
+            <Button Text="Cadastrar Evento" Clicked="OnCadastrarEventoClicked" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

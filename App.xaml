@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCE.App">
+    <Application.Resources>
+        <!-- Definir Cores -->
+        <Color x:Key="BackgroundColor">#2C003E</Color>
+        <!-- Roxo escuro -->
+        <Color x:Key="AccentColor">#9C1B8A</Color>
+        <!-- Roxo mais claro -->
+        <Color x:Key="TextColor">#FFFFFF</Color>
+        <!-- Branco para texto -->
+
+        <!-- Definir a fonte global -->
+        <Style x:Key="DefaultStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="Dancing"/>
+            <Setter Property="TextColor" Value="{DynamicResource TextColor}"/>
+        </Style>
+
+        <!-- Definir o estilo para Botões -->
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource AccentColor}"/>
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontFamily" Value="Dancing"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="CornerRadius" Value="20"/>
+        </Style>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="MauiAppCE.Views.ResumoEvento"
+             Padding="20">
+
+    <ScrollView>
+        <StackLayout>
+
+            <!-- Título -->
+            <Label Text="Resumo do Evento" FontSize="24" HorizontalOptions="Center" FontFamily="Dancing"/>
+
+            <!-- Nome do evento -->
+            <Label Text="Nome do Evento:" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding Nome}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Data de Início -->
+            <Label Text="Data de Início:" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Data de Término -->
+            <Label Text="Data de Término:" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding DataTermino, StringFormat='{0:dd/MM/yyyy}'}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Duração -->
+            <Label Text="Duração do Evento (dias):" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding Duracao}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Número de Participantes -->
+            <Label Text="Número de Participantes:" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding NumeroParticipantes}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Custo Total -->
+            <Label Text="Custo Total do Evento:" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding CustoTotal, StringFormat='R$ {0:F2}'}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Local -->
+            <Label Text="Local do Evento:" FontSize="18" FontAttributes="Bold" FontFamily="Dancing"/>
+            <Label Text="{Binding Local}" FontSize="18" FontFamily="Dancing"/>
+
+            <!-- Botão de voltar -->
+            <Button Text="Voltar" Clicked="OnVoltarClicked" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
